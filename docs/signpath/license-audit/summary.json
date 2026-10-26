@@ -1,0 +1,59 @@
+{
+  "status": "review-required",
+  "database_sha256": "092acacc7280d0daee00aacbf80d6b2dfcfe726a53de90f8f21110bbaa7c5523",
+  "source_metadata": {
+    "source": "TorahLM / TorahApp; upstream Sefaria",
+    "commit": "0b913ff6b83ed3ca4f4728c16b88662a74d2856e",
+    "downloaded_at": "2026-10-23T20:52:45Z",
+    "language": "Hebrew / Aramaic only; English translations excluded",
+    "notes": "Tanakh and Babylonian Talmud only. Names and commentary attributions follow the source catalog. Rashi is included where the source has a Rashi text; no replacement is labeled Rashi."
+  },
+  "books": 151,
+  "passages": 248939,
+  "licenses": {
+    "CC-BY": {
+      "books": 7,
+      "passages": 2308
+    },
+    "CC-BY-NC": {
+      "books": 35,
+      "passages": 73617
+    },
+    "CC-BY-SA": {
+      "books": 40,
+      "passages": 29395
+    },
+    "Public Domain": {
+      "books": 48,
+      "passages": 118717
+    },
+    "unknown": {
+      "books": 21,
+      "passages": 24902
+    }
+  },
+  "unknown_titles": [
+    "Rashi on Judges",
+    "Rashi on I Samuel",
+    "Rashi on II Samuel",
+    "Rashi on Isaiah",
+    "Rashi on Jeremiah",
+    "Rashi on Ezekiel",
+    "Rashi on Hosea",
+    "Rashi on Amos",
+    "Rashi on Obadiah",
+    "Rashi on Jonah",
+    "Rashi on Zechariah",
+    "Rashi on Psalms",
+    "Rashi on Proverbs",
+    "Rashi on Job",
+    "Rashi on Daniel",
+    "Rashi on Ezra",
+    "Rashi on Nehemiah",
+    "Rashi on I Chronicles",
+    "Rashi on II Chronicles",
+    "Menachot",
+    "Chullin"
+  ],
+  "notice": "Inventory only. No permission is inferred and no source database or text is modified."
+}

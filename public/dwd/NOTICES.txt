@@ -1,0 +1,16 @@
+Offline DavkaWriter import
+
+Folio offline DavkaWriter reader/converter, integrated into Folio with the
+original code owner's authorization on 26 October 2026 under the MIT license.
+See LICENSE.txt. Bundled source and integrity hashes:
+converter/sources.json and PROVENANCE.json.
+Only the local DWD conversion modules are included; no cloud conversion,
+analytics, PDF importer, or proprietary DavkaWriter fonts are bundled.
+
+Pyodide 0.29.3 — Mozilla Public License 2.0 (PYODIDE-LICENSE.txt).
+Unmodified runtime from the pinned pyodide npm package.
+Corresponding source: https://github.com/pyodide/pyodide/tree/0.29.3
+Python 3.13.2 — Python Software Foundation license (PYTHON-LICENSE.txt).
+Source: https://github.com/python/cpython/tree/v3.13.2
+
+No system Python or runtime package downloads are needed.

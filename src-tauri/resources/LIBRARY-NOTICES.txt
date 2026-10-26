@@ -1,0 +1,43 @@
+Folio Hebrew Library — personal offline reference collection
+
+Texts downloaded from TorahLM / TorahApp's official repository:
+https://github.com/TorahApp/TorahLM-download
+Upstream source: Sefaria, https://www.sefaria.org
+TorahLM licensing notice: https://torahlm.org/sefaria_license
+Sefaria licensing guide:
+https://help.sefaria.org/hc/en-us/articles/18490043237148-How-to-Find-and-Understand-Licensing-or-Copyright-Information
+
+Every book's edition, license label, source URL, and source-file SHA-256 are
+stored in library.sqlite. The source snapshot commit is in its metadata table.
+The reading interface inserts passage text only. Edition, license and source
+metadata are retained in the bundled database and this internal notice.
+
+The corpus includes Public Domain, CC0, CC-BY, CC-BY-SA, CC-BY-NC and unspecified
+licenses. In particular, the William Davidson vocalized Talmud editions are
+generally marked CC-BY-NC. Keep attribution, respect noncommercial and
+share-alike terms, and check individual edition rights before redistribution.
+An unspecified upstream license is not a grant of redistribution rights.
+The software's licensing does not relicense the source texts.
+
+Hebrew and Aramaic source text only. English translations are excluded.
+Formatting is converted from Markdown to plain text for reading and insertion;
+vowels and cantillation are retained. A separate normalized search index omits
+combining marks and normalizes final letter forms. Content and names follow
+the upstream edition, including traditional attributions to Rashi.
+
+Tanakh is displayed as 39 component books (the traditional 24-book canon,
+with Samuel, Kings, Chronicles, Ezra-Nehemiah and the Twelve split for browsing).
+Bavli includes 37 tractates with Gemara in this catalog. The Jerusalem Talmud
+is excluded at the user's request. Shekalim, whose Gemara is from Yerushalmi,
+is therefore not included in this Babylonian-only collection.
+Rashi is included on all 39 Tanakh component books and the 36 Bavli tractates
+for which this source supplies a Rashi text. Rashi does not cover every passage.
+No Rashi on Tamid is supplied. No other author is substituted.
+
+Public license resources:
+CC0: https://creativecommons.org/publicdomain/zero/1.0/
+CC BY: https://creativecommons.org/licenses/by/4.0/
+CC BY-SA: https://creativecommons.org/licenses/by-sa/4.0/
+CC BY-NC: https://creativecommons.org/licenses/by-nc/4.0/
+These links explain the license families; the source labels do not consistently
+specify version numbers. They must not be read as assigning version 4.0.

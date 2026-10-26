@@ -1,0 +1,45 @@
+{
+  "name": "folio-desktop",
+  "private": true,
+  "license": "MIT",
+  "version": "0.5.1",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm prepare:dwd && vite --host 127.0.0.1",
+    "build": "pnpm prepare:dwd && tsc --noEmit && vite build",
+    "test": "vitest run",
+    "test:browser": "vitest run && playwright test",
+    "tauri": "tauri",
+    "desktop": "tauri dev",
+    "test:production": "playwright test --config playwright.production.config.ts",
+    "build:signed": "powershell -NoProfile -File scripts/build-signed.ps1",
+    "prepare:dwd": "node scripts/prepare-dwd.mjs"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tiptap/core": "^3.0.0",
+    "@tiptap/extension-highlight": "^3.0.0",
+    "@tiptap/extension-image": "^3.0.0",
+    "@tiptap/extension-subscript": "^3.0.0",
+    "@tiptap/extension-superscript": "^3.0.0",
+    "@tiptap/extension-table": "^3.0.0",
+    "@tiptap/extension-text-align": "^3.0.0",
+    "@tiptap/extension-text-style": "^3.0.0",
+    "@tiptap/pm": "3.32.0",
+    "@tiptap/starter-kit": "^3.0.0",
+    "docx": "^9.5.1",
+    "jszip": "^3.10.1",
+    "lucide": "^0.468.0",
+    "pdfmake": "0.2.20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "jsdom": "^26.0.0",
+    "pyodide": "0.29.3",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  }
+}
