@@ -70,16 +70,21 @@ inserted its Hebrew text into a new document and saved a separate QA ODT outside
 the repository. That ODT matches the source mishnah exactly, including niqqud,
 Hebrew language and RTL properties, with no added commentary, credits or links.
 
+The final installed build also retained the selected mishnah and its highlight
+when hiding and restoring niqqud. The regression check passed in development
+and production browser runs. GitHub CI for the source update passed:
+https://github.com/bnoy-ilearnco/folio/actions/runs/40370057285.
+
 Installed database SHA-256:
 `e525e891a7f9de6fed02d227bd31a29c803ef5464aa0a96f04c2f1ded757f438`.
 
 Installed executable SHA-256:
-`5bbfa956cbda06e524967c30889698b652ccb6409720311c4ab907a6cb28d157`.
+`5549d4c818a40e6cc2c5905ebaf5b564cfeaf0203124f98b639cf5dc1ab64ec8`.
 The unpackaged build differs only in Tauri's three-byte bundle marker (`UNK`
 versus the installer's `NSS`); all other bytes match.
 
 Single offline installer: `Folio-0.6.0-Windows-x64-Offline-Setup.exe`,
-258,139,312 bytes, SHA-256
-`f0d2654843ce83235050ddc615b4cba7df87107ada1c85b46f9647b3e04bdc71`.
+258,131,169 bytes, SHA-256
+`82189c0c832a73d24c7d85e609e79be878487c8d6320e0e41157ec99335ef18a`.
 It remains unsigned. Updating this existing machine passed; first installation
 on a clean Windows machine and physical printer output were not tested here.

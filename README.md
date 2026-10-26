@@ -306,7 +306,7 @@ Version 0.2.1 adds paired English and Hebrew writing buttons, including active l
 
 ## Share one installer
 
-The local development package is `Folio-0.6.0-Windows-x64-Offline-Setup.exe` (258,139,312 bytes).
+The local development package is `Folio-0.6.0-Windows-x64-Offline-Setup.exe` (258,131,169 bytes).
 It contains the application, offline library, bundled Hebrew/Rashi fonts,
 DWD reader/Python runtime, license resources and Microsoft's offline WebView2
 prerequisite installer. No portable ZIP or source folder is required.
