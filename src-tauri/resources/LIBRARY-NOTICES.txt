@@ -25,6 +25,10 @@ vowels and cantillation are retained. A separate normalized search index omits
 combining marks and normalizes final letter forms. Content and names follow
 the upstream edition, including traditional attributions to Rashi.
 
+Intended library use: free personal/noncommercial use, as specified by the
+publisher on 26 October 2026. Each edition retains its own applicable terms;
+this intent does not replace missing permissions or relicense any text.
+
 Tanakh is displayed as 39 component books (the traditional 24-book canon,
 with Samuel, Kings, Chronicles, Ezra-Nehemiah and the Twelve split for browsing).
 Bavli includes 37 tractates with Gemara in this catalog. The Jerusalem Talmud
@@ -33,6 +37,14 @@ is therefore not included in this Babylonian-only collection.
 Rashi is included on all 39 Tanakh component books and the 36 Bavli tractates
 for which this source supplies a Rashi text. Rashi does not cover every passage.
 No Rashi on Tamid is supplied. No other author is substituted.
+
+Mishnah includes all 63 tractates in six orders, 4,192 mishnayot, with 63
+Bartenura commentary texts (21,204 comments). Browsing follows tractate,
+chapter and mishnah numbering. Pirkei Avot includes the source's sixth chapter
+(Kinyan Torah). Bartenura follows the source's coverage; a commentary is not
+invented for a mishnah without a source comment. No Rashi is added to Mishnah.
+The Mishnah texts are marked Public Domain upstream. Bartenura edition labels
+are preserved individually, including noncommercial and unspecified labels.
 
 Public license resources:
 CC0: https://creativecommons.org/publicdomain/zero/1.0/

@@ -204,7 +204,7 @@ pub async fn library_search(
 ) -> Result<Vec<SearchHit>, String> {
     if query.len() > 500
         || !(0..=100_000).contains(&offset)
-        || !["", "Tanakh", "Bavli"].contains(&collection.as_str())
+        || !["", "Tanakh", "Bavli", "Mishnah"].contains(&collection.as_str())
     {
         return Err("Invalid library search".into());
     }
@@ -243,7 +243,7 @@ mod tests {
         assert_eq!(count, 37);
         let count: i64 = db
             .query_row(
-                "SELECT count(*) FROM books WHERE collection NOT IN ('Tanakh','Bavli')",
+                "SELECT count(*) FROM books WHERE collection NOT IN ('Tanakh','Bavli','Mishnah')",
                 [],
                 |r| r.get(0),
             )
@@ -257,6 +257,16 @@ mod tests {
             )
             .unwrap();
         assert_eq!(count, 39);
+        let count: i64 = db
+            .query_row(
+                "SELECT count(*) FROM books WHERE collection='Mishnah' AND base_title IS NULL",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(count, 63);
+        let count: i64 = db.query_row("SELECT count(*) FROM books WHERE collection='Mishnah' AND base_title IS NOT NULL AND title LIKE 'Bartenura on %'", [], |r|r.get(0)).unwrap();
+        assert_eq!(count, 63);
         let mismatch:i64=db.query_row("SELECT count(*) FROM books b WHERE b.segments!=(SELECT count(*) FROM passages p WHERE p.book_id=b.id)",[],|r|r.get(0)).unwrap();
         assert_eq!(mismatch, 0);
         let integrity: String = db
@@ -283,5 +293,36 @@ mod tests {
         assert!(comments
             .iter()
             .any(|p| p.base_ref.as_deref() == Some("1:1")));
+    }
+    #[test]
+    fn mishnah_search_and_bartenura_alignment() {
+        let db = db();
+        let base_id: i64 = db
+            .query_row(
+                "SELECT id FROM books WHERE title='Mishnah Berakhot'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let commentary_id: i64 = db
+            .query_row(
+                "SELECT id FROM books WHERE base_title='Mishnah Berakhot'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        let chapter = passages(&db, base_id, "1").unwrap();
+        assert_eq!(chapter.len(), 5);
+        assert_eq!(chapter[0].ref_, "1:1");
+        assert!(chapter[0].text.contains("מֵאֵימָתַי"));
+        let comments = passages(&db, commentary_id, "1").unwrap();
+        assert!(comments
+            .iter()
+            .any(|p| p.base_ref.as_deref() == Some("1:1")));
+        let hits = search(&db, "מאימתי קורין", "Mishnah", Some(base_id), 0).unwrap();
+        assert!(hits.iter().any(|hit| hit.ref_ == "1:1"));
+        assert!(search(&db, "מאימתי קורין", "Bavli", Some(base_id), 0)
+            .unwrap()
+            .is_empty());
     }
 }

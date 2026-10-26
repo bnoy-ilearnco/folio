@@ -22,8 +22,10 @@ or signature has been created for Folio yet. Existing installers are unsigned.
    integrated converter on 26 October 2026. `LICENSE` and component notices
    record this scope. The public repository has been created.
    Do not apply MIT to third-party assets.
-2. Resolve the bundled text rights. The current inventory has 35 CC-BY-NC
-   editions and 21 unknown licenses. Also establish the exact versions and
+2. Resolve bundled-text eligibility with the provider. The publisher intends
+   free personal/noncommercial library use. After adding Mishnah/Bartenura,
+   the current inventory has 90 CC-BY-NC editions and 22 unknown licenses.
+   Also establish the exact versions and
    required notices for the other Creative Commons editions. Ask SignPath how
    its all-components OSS requirement applies to the data. Do not publish the
    current database/installer on an assumption of permission. The installed

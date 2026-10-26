@@ -11,6 +11,10 @@ The MIT license does not relicense the following separately licensed materials:
 - Hebrew source texts: `src-tauri/resources/library.sqlite` and
   `LIBRARY-NOTICES.txt`. Edition/license/source metadata is retained per book.
   Redistribution review is pending; see `docs/signpath/license-audit`.
+  `tests/fixtures/library.json` includes selected source passages for testing;
+  its catalog retains each edition's license and source URL. These source
+  texts are not relicensed under Folio's software MIT license. Library use is
+  intended to be free and personal/noncommercial.
 - Fonts: original per-family license files and Culmus corresponding source
   archives in `public/fonts` and `public/fonts/hebrew`. GPL font exceptions
   and SIL Open Font License terms remain applicable.

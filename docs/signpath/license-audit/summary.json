@@ -1,35 +1,35 @@
 {
   "status": "review-required",
-  "database_sha256": "092acacc7280d0daee00aacbf80d6b2dfcfe726a53de90f8f21110bbaa7c5523",
+  "database_sha256": "e525e891a7f9de6fed02d227bd31a29c803ef5464aa0a96f04c2f1ded757f438",
   "source_metadata": {
     "source": "TorahLM / TorahApp; upstream Sefaria",
     "commit": "0b913ff6b83ed3ca4f4728c16b88662a74d2856e",
-    "downloaded_at": "2026-10-23T20:52:45Z",
+    "downloaded_at": "2026-10-26T17:02:06Z",
     "language": "Hebrew / Aramaic only; English translations excluded",
-    "notes": "Tanakh and Babylonian Talmud only. Names and commentary attributions follow the source catalog. Rashi is included where the source has a Rashi text; no replacement is labeled Rashi."
+    "notes": "Tanakh and Babylonian Talmud with available Rashi; all 63 Mishnah tractates with available Bartenura, organized by order, tractate, chapter and mishnah. No Rashi is added to Mishnah. Jerusalem Talmud excluded. Edition labels and traditional commentary attributions follow the source catalog."
   },
-  "books": 151,
-  "passages": 248939,
+  "books": 277,
+  "passages": 274335,
   "licenses": {
     "CC-BY": {
       "books": 7,
       "passages": 2308
     },
     "CC-BY-NC": {
-      "books": 35,
-      "passages": 73617
+      "books": 90,
+      "passages": 90982
     },
     "CC-BY-SA": {
       "books": 40,
       "passages": 29395
     },
     "Public Domain": {
-      "books": 48,
-      "passages": 118717
+      "books": 118,
+      "passages": 126352
     },
     "unknown": {
-      "books": 21,
-      "passages": 24902
+      "books": 22,
+      "passages": 25298
     }
   },
   "unknown_titles": [
@@ -53,7 +53,8 @@
     "Rashi on I Chronicles",
     "Rashi on II Chronicles",
     "Menachot",
-    "Chullin"
+    "Chullin",
+    "Bartenura on Mishnah Mikvaot"
   ],
   "notice": "Inventory only. No permission is inferred and no source database or text is modified."
 }

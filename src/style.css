@@ -60,3 +60,4 @@ dialog{border:1px solid #bdc9d6;border-radius:8px;padding:22px 24px;max-width:mi
 @font-face{font-family:'Heebo';font-style:normal;font-weight:700;font-display:block;src:url('/fonts/hebrew/Heebo-Bold.ttf') format('truetype')}
 
 .page-header .header-content,.page-footer .header-content{color:var(--paper-ink)}
+.library-navigation label[hidden]{display:none}.library-passage.library-selected{background:#edf4ff;outline:2px solid #2b6cb0;outline-offset:3px;scroll-margin-top:54px}

@@ -24,6 +24,23 @@ corpus are documented; frontend CI remains enabled.
 
 ## Installed desktop app
 
+### 0.6.0: complete Mishnah and Bartenura library
+
+The new build adds **משניות**: all 63 masechtos, 4,192 mishnayot and Bartenura
+on all 63 tractates (21,204 comments), organized by seder, masechta, perek and
+mishnah. The Hebrew reader aligns Bartenura with each mishnah, supports direct
+mishnah selection and remembers the selected reading position. Tanakh, Bavli
+and their Rashi texts are unchanged. The full database now has 277 books and
+274,335 passages. See [coverage and source notes](docs/mishnah-library.md).
+
+Library use is intended to be free and personal/noncommercial. Edition notices
+remain internal; no source credits or citations are inserted into documents.
+The existing vocalized Bavli remains in place after checking HebrewBooks' source
+and limited reuse terms. No SignPath approval or signed installer is claimed.
+Version 0.6.0 is installed and was tested on the development Windows machine;
+native reading, mishnah selection, Bartenura alignment, insertion and a separate
+ODT save were verified. The automated checks listed in the coverage notes pass.
+
 ### 0.5.1: import formatting and Rashi font
 
 DWD import now preserves fixed line spacing, paragraph mark sizes, logical
@@ -289,7 +306,7 @@ Version 0.2.1 adds paired English and Hebrew writing buttons, including active l
 
 ## Share one installer
 
-The local development package is `Folio-0.5.1-Windows-x64-Offline-Setup.exe` (254,792,814 bytes).
+The local development package is `Folio-0.6.0-Windows-x64-Offline-Setup.exe` (258,139,312 bytes).
 It contains the application, offline library, bundled Hebrew/Rashi fonts,
 DWD reader/Python runtime, license resources and Microsoft's offline WebView2
 prerequisite installer. No portable ZIP or source folder is required.

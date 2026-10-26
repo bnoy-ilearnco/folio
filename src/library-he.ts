@@ -2,8 +2,9 @@ import type {LibraryBook} from './library';
 
 export const categoryHe=(category:string)=>(({Torah:'תורה',Neviim:'נביאים',Ketuvim:'כתובים',Zeraim:'זרעים',Moed:'מועד',Nashim:'נשים',Nezikin:'נזיקין',Kodashim:'קדשים',Tohorot:'טהרות'} as Record<string,string>)[category]??'ספרים נוספים');
 export const bookHe=(book:LibraryBook)=>book.he_title.replace(/"/g,'״');
-// Four known source artifacts; preserve the raw edition text in the database.
-export const libraryTextHe=(text:string)=>text.replaceAll('(.b)','').replaceAll('/b>','').replaceAll('(qb)','').replace('כזה x','כזה ×');
+export const commentaryHe=(book:LibraryBook)=>book.collection==='Mishnah'?'ברטנורא':'רש״י';
+// Known source markup/diagram artifacts; preserve raw edition text in SQLite.
+export const libraryTextHe=(text:string)=>text.replaceAll('(.b)','').replaceAll('/b>','').replaceAll('(qb)','').replace('כזה x','כזה ×').replace('כָּזֶה c','כָּזֶה ⊂');
 
 export function numberHe(value:number):string {
  if(!Number.isFinite(value))return 'לא ידוע';
@@ -21,5 +22,5 @@ export function sectionHe(section:string,collection:string){
 }
 export function referenceHe(ref:string,book:LibraryBook){
  const [section,...parts]=ref.split(':');
- return [sectionHe(section,book.collection),...parts.map((n,i)=>`${i===0?(book.collection==='Tanakh'?'פסוק':'קטע'):'פירוש'} ${numberHe(Number(n))}`)].join(', ');
+ return [sectionHe(section,book.collection),...parts.map((n,i)=>`${i===0?(book.collection==='Tanakh'?'פסוק':book.collection==='Mishnah'?'משנה':'קטע'):'פירוש'} ${numberHe(Number(n))}`)].join(', ');
 }

@@ -1,11 +1,13 @@
 # SignPath Foundation application — draft, not submitted
 
-Project: Folio, Windows desktop word processor, version 0.5.1.
+Project: Folio, Windows desktop word processor, version 0.6.0.
 
 Description: A Tauri/Rust desktop application with a Tiptap editor, Hebrew and
 English text entry, right-to-left formatting, manual niqqud, bundled Hebrew and
 Rashi fonts, ODT documents, DOCX and DavkaWriter import, PDF/print, page borders,
-and an offline Hebrew Tanakh/Babylonian Talmud/Rashi library.
+and an offline Hebrew Tanakh/Babylonian Talmud/Rashi library plus all 63
+Mishnah tractates and Bartenura. Library use is intended to be free and
+personal/noncommercial, per the publisher's clarification.
 
 Repository selected by the owner: `https://github.com/bnoy-ilearnco/folio`.
 The public repository was created on 26 October 2026. Initial source publication
@@ -23,8 +25,8 @@ public release; eligibility and approval remain SignPath's decision.
 
 ## Disclosure for Foundation review
 
-The current offline installer contains a 151-book, 248,939-passage database.
-Its upstream labels include 35 CC-BY-NC books and 21 books with unknown
+The 0.6.0 library contains a 277-book, 274,335-passage database.
+Its upstream labels include 90 CC-BY-NC books and 22 books with unknown
 licenses. The full inventory is in `license-audit/books.csv`. Exact license
 versions and redistribution/attribution obligations need review. Please clarify
 Foundation eligibility for this bundled text data; do not treat it as software

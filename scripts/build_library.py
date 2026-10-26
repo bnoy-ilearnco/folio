@@ -22,6 +22,16 @@ ORDERS = {
     'Tohorot': 'Niddah',
 }
 
+# All 63 Mishnah tractates, including those without Babylonian Gemara.
+MISHNAH_ORDERS = {
+    'Zeraim': ORDERS['Zeraim'],
+    'Moed': ORDERS['Moed'],
+    'Nashim': ORDERS['Nashim'],
+    'Nezikin': 'Bava Kamma|Bava Metzia|Bava Batra|Sanhedrin|Makkot|Shevuot|Eduyot|Avodah Zarah|Avot|Horayot',
+    'Kodashim': 'Zevachim|Menachot|Chullin|Bekhorot|Arakhin|Temurah|Keritot|Meilah|Tamid|Middot|Kinnim',
+    'Tohorot': 'Kelim|Oholot|Negaim|Parah|Tahorot|Mikvaot|Niddah|Makhshirin|Zavim|Tevul Yom|Yadayim|Oktzin',
+}
+
 def fetch(url):
     for attempt in range(4):
         try:
@@ -92,20 +102,21 @@ def main():
     available = {x['path']: x for x in tree['tree'] if x['type'] == 'blob'}
     selections = []
     rank = 0
-    for collection, groups in [('Tanakh', TANAKH), ('Bavli', ORDERS)]:
+    for collection, groups in [('Tanakh', TANAKH), ('Bavli', ORDERS), ('Mishnah', MISHNAH_ORDERS)]:
         for group, titles in groups.items():
             for base in titles.split('|'):
-                title = ('Jerusalem Talmud ' if collection == 'Yerushalmi' else '') + base
-                category = 'Tanakh' if collection == 'Tanakh' else 'Talmud'
+                title = ('Pirkei Avot' if base == 'Avot' else 'Mishnah ' + ("Ta'anit" if base == 'Taanit' else base)) if collection == 'Mishnah' else base
+                category = {'Tanakh': 'Tanakh', 'Bavli': 'Talmud', 'Mishnah': 'Mishnah'}[collection]
                 path = f'books/{category}/{title}.md'
                 if path not in available:
-                    if collection == 'Tanakh': raise ValueError('Missing ' + path)
+                    if collection in ('Tanakh', 'Mishnah'): raise ValueError('Missing ' + path)
                     continue
                 rank += 1
                 selections.append((title, collection, group, rank, None, path))
-                rashi = f'books/{category}/Rashi on {title}.md'
-                if rashi in available:
-                    selections.append(('Rashi on ' + title, collection, group, rank, title, rashi))
+                commentary_title = ('Bartenura on ' + title.replace("Ta'anit", 'Taanit')) if collection == 'Mishnah' else 'Rashi on ' + title
+                commentary_path = f'books/{category}/{commentary_title}.md'
+                if commentary_path in available:
+                    selections.append((commentary_title, collection, group, rank, title, commentary_path))
     def download(item):
         path = item[-1]
         target = args.cache / path
@@ -154,7 +165,7 @@ def main():
         db.close()
         args.cache.joinpath('import-errors.json').write_text(json.dumps(failures,ensure_ascii=False,indent=2),encoding='utf-8')
         raise ValueError('\n'.join(failures))
-    manifest = {'source':'TorahLM / TorahApp; upstream Sefaria', 'commit':commit,'downloaded_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'language':'Hebrew / Aramaic only; English translations excluded','notes':'Tanakh and Babylonian Talmud only. Names and commentary attributions follow the source catalog. Rashi is included where the source has a Rashi text; no replacement is labeled Rashi.'}
+    manifest = {'source':'TorahLM / TorahApp; upstream Sefaria', 'commit':commit,'downloaded_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'language':'Hebrew / Aramaic only; English translations excluded','notes':'Tanakh and Babylonian Talmud with available Rashi; all 63 Mishnah tractates with available Bartenura, organized by order, tractate, chapter and mishnah. No Rashi is added to Mishnah. Jerusalem Talmud excluded. Edition labels and traditional commentary attributions follow the source catalog.'}
     for k,v in manifest.items(): db.execute('INSERT INTO metadata VALUES(?,?)',(k,v))
     db.execute("INSERT INTO passage_search(passage_search) VALUES('optimize')")
     db.commit()
