@@ -2,7 +2,10 @@
 
 A desktop word processor built with **Tauri + Rust + Tiptap**, with OpenDocument Text (`.odt`) as its native file format. Folio is a working name.
 
-Folio is now built and installed as a Windows desktop application. Launch **Folio** from the Desktop or Start menu. It runs independently of the development server. A standalone executable and Windows installer are included beside the source archive. The browser preview remains available for development.
+Folio runs as a Windows desktop application independently of the development
+server. This repository contains the source; a public installer release is
+pending signing approval and clearance of the bundled Hebrew text editions.
+The browser preview remains available for development.
 
 ## Source license and release preparation
 
@@ -38,7 +41,7 @@ and the Culmus source archives are distributed with the fonts.
 Reopen the original DWD to use the improved importer. ODT copies made by the
 older importer cannot reconstruct formatting already flattened by that version.
 Folio still uses a continuous canvas and one page layout, so pagination and
-complex object placement can differ from Folio. PDF/print repeats header text
+complex object placement can differ from the original DWD. PDF/print repeats header text
 using its leading font/size/emphasis; mixed header styles and inline boxes are
 simplified in Chromium margin boxes. Full header formatting is kept in ODT/DOCX.
 
@@ -171,7 +174,7 @@ Build a Windows installer:
 pnpm tauri build
 ```
 
-The installer will be written under `src-tauri/target/release/bundle/nsis/`. The included GitHub Actions workflow can build it on a Windows runner once this folder is used as a repository root. That workflow has not been run here. The desktop configuration currently targets Windows; other operating systems need their own packaging and native QA.
+The installer will be written under `src-tauri/target/release/bundle/nsis/`. GitHub-hosted Windows CI passed the frontend unit tests and production build. Native packaging is gated pending documented corpus distribution rights; it has not run in CI. The desktop configuration currently targets Windows; other operating systems need their own packaging and native QA.
 
 ## Offline Hebrew library (0.3.0)
 
@@ -204,7 +207,7 @@ The database is bundled in the installer (about 101 MB uncompressed). To rebuild
 python scripts/build_library.py --cache ../../work/torahlm-cache
 ```
 
-The builder verifies each cached download against the pinned Git blob hash, validates declared passage counts, builds a separate normalized FTS5 index, checks SQLite integrity, and replaces the previous database only on success. To deliberately use a new source snapshot, add `--commit main`; review the resulting manifest before distributing an update. Runtime library commands open the database read-only on a worker thread. The source package includes the complete built database, so builds do not download the corpus again.
+The builder verifies each cached download against the pinned Git blob hash, validates declared passage counts, builds a separate normalized FTS5 index, checks SQLite integrity, and replaces the previous database only on success. To deliberately use a new source snapshot, add `--commit main`; review the resulting manifest before distributing an update. Runtime library commands open the database read-only on a worker thread. The local development database is preserved on the development machine and excluded from this public repository while edition rights are reviewed. Native builds need a legally obtained database.
 
 ## Hebrew and right-to-left writing (0.2.0)
 
@@ -286,7 +289,7 @@ Version 0.2.1 adds paired English and Hebrew writing buttons, including active l
 
 ## Share one installer
 
-Share `Folio-0.5.1-Windows-x64-Offline-Setup.exe` alone (254,792,814 bytes).
+The local development package is `Folio-0.5.1-Windows-x64-Offline-Setup.exe` (254,792,814 bytes).
 It contains the application, offline library, bundled Hebrew/Rashi fonts,
 DWD reader/Python runtime, license resources and Microsoft's offline WebView2
 prerequisite installer. No portable ZIP or source folder is required.
