@@ -23,5 +23,11 @@ Verification on this machine:
 No new installer was built or installed for these preparation changes. The
 existing installed app and single offline installer predate this integration
 rename and remain unsigned. No SignPath account or signature was activated.
-The public repository `bnoy-ilearnco/folio` was created. Foundation application
-submission is pending resolution of source-text redistribution and eligibility.
+The source was published to `https://github.com/bnoy-ilearnco/folio`, with initial
+commit `11ed9c8e8b44298ade0950dbceb2e75e5311db2f`. GitHub-hosted Windows frontend
+CI passed locked dependency installation, 23 unit checks and the production
+frontend build in run `40360619476`. Native installer packaging was intentionally
+skipped because distribution approval for the corpus has not been recorded.
+Foundation application submission is pending resolution of source-text
+redistribution and eligibility. The application page displayed its heading but
+no application form during this session; no application was submitted.
