@@ -1,0 +1,18 @@
+/* Document fonts only; loaded locally on demand. */
+@font-face{font-family:'Cardo';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/cardo/Cardo-Regular.ttf') format('truetype')}
+@font-face{font-family:'Cardo';font-style:normal;font-weight:700;font-display:block;src:url('/fonts/collection/cardo/Cardo-Bold.ttf') format('truetype')}
+@font-face{font-family:'Cardo';font-style:italic;font-weight:400;font-display:block;src:url('/fonts/collection/cardo/Cardo-Italic.ttf') format('truetype')}
+@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:300 900;font-display:block;src:url('/fonts/collection/frankruhllibre/FrankRuhlLibre[wght].ttf') format('truetype')}
+@font-face{font-family:'Bellefair';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/bellefair/Bellefair-Regular.ttf') format('truetype')}
+@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:400 700;font-display:block;src:url('/fonts/collection/librebaskerville/LibreBaskerville[wght].ttf') format('truetype')}
+@font-face{font-family:'Libre Baskerville';font-style:italic;font-weight:400 700;font-display:block;src:url('/fonts/collection/librebaskerville/LibreBaskerville-Italic[wght].ttf') format('truetype')}
+@font-face{font-family:'Gveret Levin';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/gveretlevin/GveretLevin-Regular.ttf') format('truetype')}
+@font-face{font-family:'Playpen Sans Hebrew';font-style:normal;font-weight:100 800;font-display:block;src:url('/fonts/collection/playpensanshebrew/PlaypenSansHebrew[wght].ttf') format('truetype')}
+@font-face{font-family:'Solitreo';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/solitreo/Solitreo-Regular.ttf') format('truetype')}
+@font-face{font-family:'Patrick Hand';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/patrickhand/PatrickHand-Regular.ttf') format('truetype')}
+@font-face{font-family:'Keter Aram Tsova';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/keteraramtsova/KeterAramTsova.ttf') format('truetype')}
+@font-face{font-family:'Stam Ashkenaz CLM';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/stamashkenaz/StamAshkenazCLM.ttf') format('truetype')}
+@font-face{font-family:'Stam Sefarad CLM';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/stamsefarad/StamSefaradCLM.ttf') format('truetype')}
+@font-face{font-family:'Uncial Antiqua';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/uncialantiqua/UncialAntiqua-Regular.ttf') format('truetype')}
+@font-face{font-family:'IM FELL English';font-style:normal;font-weight:400;font-display:block;src:url('/fonts/collection/imfellenglish/IMFeENrm28P.ttf') format('truetype')}
+@font-face{font-family:'IM FELL English';font-style:italic;font-weight:400;font-display:block;src:url('/fonts/collection/imfellenglish/IMFeENit28P.ttf') format('truetype')}

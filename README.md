@@ -24,6 +24,15 @@ corpus are documented; frontend CI remains enabled.
 
 ## Installed desktop app
 
+### 0.6.2: publishing, handwriting and manuscript fonts
+
+Adds 13 open font families, bundled for offline use and organized by style and
+language in the Home font picker. Includes Cardo, Frank Ruhl Libre, Bellefair,
+Libre Baskerville, Gveret Levin, Playpen Sans Hebrew, Solitreo, Patrick Hand,
+Keter Aram Tsova, Stam Ashkenaz CLM, Stam Sefarad CLM, Uncial Antiqua and
+IM FELL English. Scroll faces intended for unpointed Hebrew are labeled.
+See [font coverage, licenses and PDF behavior](docs/fonts.md).
+
 ### 0.6.1: DavkaWriter fidelity
 
 DWD import uses locally installed UniDavka David/Rashi/Stam at their original

@@ -1,0 +1,217 @@
+[
+  {
+    "file": "cardo/Cardo-Bold.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/cardo/Cardo-Bold.ttf",
+    "sha256": "6c9383b1471936ee83b08b67bf79f0ed92bee3d5e8363ec3ba21309d5a272e36"
+  },
+  {
+    "file": "cardo/Cardo-Italic.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/cardo/Cardo-Italic.ttf",
+    "sha256": "52c51cfde3a827dd9428511c4a968699952b8a917c5f0e97be782cbfa1880f9c"
+  },
+  {
+    "file": "cardo/Cardo-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/cardo/Cardo-Regular.ttf",
+    "sha256": "bcb81f376f1c3892c7026dabf2beafbd1a7ee8ae95d132ee7d4ff7d7c3988261"
+  },
+  {
+    "file": "cardo/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/cardo/OFL.txt",
+    "sha256": "8e28b778b6e1a7ff9ca72f4dee2d53120aa2856dc1bfd0be44307e365b0e45bb"
+  },
+  {
+    "file": "frankruhllibre/FrankRuhlLibre[wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/frankruhllibre/FrankRuhlLibre%5Bwght%5D.ttf",
+    "sha256": "f9bf26966681037aae894b031bd0dcf2c1bfdfa128dd0640cf276fe62a338a43"
+  },
+  {
+    "file": "frankruhllibre/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/frankruhllibre/OFL.txt",
+    "sha256": "4e9720b2544d946737e7dfe0027a62c23c7247f0144f08bc437cdcc2e6a7d828"
+  },
+  {
+    "file": "bellefair/Bellefair-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/bellefair/Bellefair-Regular.ttf",
+    "sha256": "5c0cd4d526e6dfcb189106af6b5e6ec99a54efb6d458dfd61626ce6dc0f03026"
+  },
+  {
+    "file": "bellefair/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/bellefair/OFL.txt",
+    "sha256": "2348c4852e6322105d130aa2addbe24c962e330094ad6dfbfd9fbd2281d76b0b"
+  },
+  {
+    "file": "playpensanshebrew/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/playpensanshebrew/OFL.txt",
+    "sha256": "59440310cc2c539b53c835306f74ac8c01f1ece58bf4c65e556fca275b80a730"
+  },
+  {
+    "file": "playpensanshebrew/PlaypenSansHebrew[wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/playpensanshebrew/PlaypenSansHebrew%5Bwght%5D.ttf",
+    "sha256": "0ec8a95033c5a01e1799c60b49ab76d9922a68f715a081fc1f5587e4d2bb5b69"
+  },
+  {
+    "file": "gveretlevin/GveretLevin-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/gveretlevin/GveretLevin-Regular.ttf",
+    "sha256": "05c443395d48b97f43469da4fb08772a4c612fda306348577dbc40a1267912b1"
+  },
+  {
+    "file": "gveretlevin/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/gveretlevin/OFL.txt",
+    "sha256": "d9b228718f3f81e69ce614c6b2f4c382fd34396ca8149b4f28d07e85b8781eba"
+  },
+  {
+    "file": "solitreo/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/solitreo/OFL.txt",
+    "sha256": "5c1dd86fa761f43e8337de5ebe63ad75504423635de752c63a2f1fa93fcfc80c"
+  },
+  {
+    "file": "solitreo/Solitreo-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/solitreo/Solitreo-Regular.ttf",
+    "sha256": "0b6df66f2145e8fd013d7324b6a55c6bc0c83c4786a6c7dce7505fdbeb65295b"
+  },
+  {
+    "file": "patrickhand/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/patrickhand/OFL.txt",
+    "sha256": "377f4f9c19e935228552478eb68cc2ed82910988a60ba60e2ac73b09f32d02d1"
+  },
+  {
+    "file": "patrickhand/PatrickHand-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/patrickhand/PatrickHand-Regular.ttf",
+    "sha256": "0f173b3e6cb6d1af25babf7f0057c5ac4ee11f9992b0469bb817e967ef4ad0fc"
+  },
+  {
+    "file": "uncialantiqua/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/uncialantiqua/OFL.txt",
+    "sha256": "244ca4ef7b106d8c660e9a00cecf5d581b6a222f447d7d59a8f61711b2ad3400"
+  },
+  {
+    "file": "uncialantiqua/UncialAntiqua-Regular.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/uncialantiqua/UncialAntiqua-Regular.ttf",
+    "sha256": "33a5128b59d1c95d4f3788164f4ab3a1196f0a982263cb2cd278c47418366766"
+  },
+  {
+    "file": "imfellenglish/IMFeENit28P.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/imfellenglish/IMFeENit28P.ttf",
+    "sha256": "47cd75dce54b1f2e0831359d22d5e688f519d68ae45706b664fd310fd0e3ccf7"
+  },
+  {
+    "file": "imfellenglish/IMFeENrm28P.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/imfellenglish/IMFeENrm28P.ttf",
+    "sha256": "fe9705bbde51af802719246d4608d08d37bde956ab99d9a590da996a5221a24c"
+  },
+  {
+    "file": "imfellenglish/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/imfellenglish/OFL.txt",
+    "sha256": "2a3ca501fc4d5efcad9798531e3e06962b1e20c60e464f6cbd6c17630112c773"
+  },
+  {
+    "file": "librebaskerville/LibreBaskerville-Italic[wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/librebaskerville/LibreBaskerville-Italic%5Bwght%5D.ttf",
+    "sha256": "223959683dc73ec4437bd61fabaa4b3f22209e22855ffd3aee36ba61a5116e97"
+  },
+  {
+    "file": "librebaskerville/LibreBaskerville[wght].ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/librebaskerville/LibreBaskerville%5Bwght%5D.ttf",
+    "sha256": "05a95421961341c5b2556285e8415df9db27dab4f4abe22b446b3c6a8b916c5d"
+  },
+  {
+    "file": "librebaskerville/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/9862abc066c9b83bf84c3e8ed1fc2d8d48f9bbf0/ofl/librebaskerville/OFL.txt",
+    "sha256": "3624eddd4c8f8a908130a417ae7cd089c9da69899c4e0ca1a5217d0a6fae16fd"
+  },
+  {
+    "file": "stamashkenaz/CHANGES.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Ashkenaz/CHANGES.TXT",
+    "sha256": "08418a2a07c75845776a203b828a42641261f0a694963f6357553c34ea213a91"
+  },
+  {
+    "file": "stamashkenaz/GNU-GPL.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Ashkenaz/GNU-GPL.TXT",
+    "sha256": "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
+  },
+  {
+    "file": "stamashkenaz/INSTALL.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Ashkenaz/INSTALL.TXT",
+    "sha256": "455c13be1c805bab1f840f98c26299a9b6a413855fd028b46928f68c2b40e2a6"
+  },
+  {
+    "file": "stamashkenaz/LICENSE.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Ashkenaz/LICENSE.TXT",
+    "sha256": "4993d6c885d15afb78d0b70deb4dfb8cac1e25bf381054c84cea729a4968a4ea"
+  },
+  {
+    "file": "stamashkenaz/README.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Ashkenaz/README.TXT",
+    "sha256": "0ef3b6d1fb3802c8d661143ce629582ca6125de9486da106f81c818acc7ff569"
+  },
+  {
+    "file": "stamashkenaz/StamAshkenazCLM.ttf",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Ashkenaz/StamAshkenazCLM.ttf",
+    "sha256": "18aec29cd0f3e2f31049224712e740468fc893344289ceb1c86b02b619854ca6"
+  },
+  {
+    "file": "stamsefarad/CHANGES.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Sefarad/CHANGES.TXT",
+    "sha256": "08418a2a07c75845776a203b828a42641261f0a694963f6357553c34ea213a91"
+  },
+  {
+    "file": "stamsefarad/GNU-GPL.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Sefarad/GNU-GPL.TXT",
+    "sha256": "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
+  },
+  {
+    "file": "stamsefarad/INSTALL.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Sefarad/INSTALL.TXT",
+    "sha256": "455c13be1c805bab1f840f98c26299a9b6a413855fd028b46928f68c2b40e2a6"
+  },
+  {
+    "file": "stamsefarad/LICENSE.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Sefarad/LICENSE.TXT",
+    "sha256": "4993d6c885d15afb78d0b70deb4dfb8cac1e25bf381054c84cea729a4968a4ea"
+  },
+  {
+    "file": "stamsefarad/README.TXT",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Sefarad/README.TXT",
+    "sha256": "0ef3b6d1fb3802c8d661143ce629582ca6125de9486da106f81c818acc7ff569"
+  },
+  {
+    "file": "stamsefarad/StamSefaradCLM.ttf",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20only/Culmus%20Project%20%28GPL%20and%20GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Sofer%20Stam/Sofer%20Stam%20Sefarad/StamSefaradCLM.ttf",
+    "sha256": "0a07a15927e5288b19d8d408a269fde21746b53f24d1085abab0df311fb94cbe"
+  },
+  {
+    "file": "keteraramtsova/KeterAramTsova.ttf",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20with%20Vowels%20and%20Cantillation/Culmus%20Project%20%28GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Taamey-Culmus/KeterAramTsova/KeterAramTsova.ttf",
+    "sha256": "f662b1b1d3676b445cc0c611a0d335717ed83aa92bb00f1e63b0eb76763e3d8d"
+  },
+  {
+    "file": "keteraramtsova/LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20with%20Vowels%20and%20Cantillation/Culmus%20Project%20%28GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Taamey-Culmus/KeterAramTsova/LICENSE.txt",
+    "sha256": "49cf91e8363391c03176d867b662a2a5119f6a5c9d44dd65e180612cf6cdc6dc"
+  },
+  {
+    "file": "keteraramtsova/README.txt",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20with%20Vowels%20and%20Cantillation/Culmus%20Project%20%28GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Taamey-Culmus/KeterAramTsova/README.txt",
+    "sha256": "02e238c972c4e04a23b86a675e24facbe64bff7fd6032c4da906cfa61460b5b9"
+  },
+  {
+    "file": "keteraramtsova/KeterAramTsova.sfd",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20with%20Vowels%20and%20Cantillation/Culmus%20Project%20%28GPL%2BFE%29/Yoram%20Gnat%20%28GPL%2BFE%29/Taamey-Culmus/KeterAramTsova/source/KeterAramTsova.sfd",
+    "sha256": "21a7fbf497dc4b1538409ec6e74dc85c9f8c6399878acb2277c8212c1a052d82"
+  },
+  {
+    "file": "AncientSemiticFonts-source.tgz",
+    "source": "https://downloads.sourceforge.net/project/culmus/ancient_fonts/AncientSemiticFonts-0.06-1/AncientSemiticFonts-0.06-1.tgz",
+    "sha256": "78a5476ead3271a73379270e83f265b8433eb0c5e53b53dff90c0beff7bd8dc7"
+  },
+  {
+    "file": "stamashkenaz/StamAshkenazCLM.sfd",
+    "source": "https://mirrors.ibiblio.org/pub/mirrors/CTAN/fonts/culmus/source/StamAshkenazCLM.sfd",
+    "sha256": "ff23748b1b9df2bb1f5e26b8928342eee87ead160bdff535a505aed0f7294c45"
+  },
+  {
+    "file": "stamsefarad/StamSefaradCLM.sfd",
+    "source": "https://mirrors.ibiblio.org/pub/mirrors/CTAN/fonts/culmus/source/StamSefaradCLM.sfd",
+    "sha256": "2dc74b0b2e099434838e457e954feb9bdb49e3356d6d949ec2e8ceae34135f5b"
+  }
+]

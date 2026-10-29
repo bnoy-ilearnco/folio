@@ -26,3 +26,9 @@ The MIT license does not relicense the following separately licensed materials:
 
 This scope notice does not grant redistribution permission for content whose
 license is missing, or waive attribution, share-alike, source or other terms.
+
+## Additional document fonts (0.6.2)
+
+The unmodified Google Fonts families in `public/fonts/collection/` each include their original SIL Open Font License 1.1: Cardo, Frank Ruhl Libre, Bellefair, Libre Baskerville, Gveret Levin, Playpen Sans Hebrew, Solitreo, Patrick Hand, Uncial Antiqua, and IM FELL English.
+
+Keter Aram Tsova, Stam Ashkenaz CLM, and Stam Sefarad CLM are by Yoram Gnat / Culmus, distributed under GPL v2 with the document embedding exception. Their licenses, FontForge sources and upstream documentation are bundled alongside the fonts; Keter includes MIT licensed Hebrew layout logic. The original ancient font source archive is also included. `manifest.json` records source URLs and SHA-256 checksums. No Shlomo or proprietary Davka font files are included.

@@ -1,3 +1,4 @@
+import {FONT_COLLECTION} from './font-catalog';
 import type { JSONContent } from '@tiptap/core';
 import type {BorderStyle} from './borders';
 export type DocNode = JSONContent;
@@ -13,4 +14,4 @@ export function validateDocument(value: unknown): value is DocumentData {
   const d = value as DocumentData;
   return !!d && d.version === 1 && typeof d.title === 'string' && d.content?.type === 'doc' && !!d.page && ['A4','Letter'].includes(d.page.size) && ['portrait','landscape'].includes(d.page.orientation) && ['top','right','bottom','left'].every(k => Number.isFinite(d.page[k as 'top']) && d.page[k as 'top'] >= 0 && d.page[k as 'top'] <= 100);
 }
-export const FONTS = ['Noto Serif', 'Noto Sans', 'Noto Sans Mono', 'Noto Sans Hebrew', 'Noto Serif Hebrew', 'David Libre', 'Taamey David CLM', 'Taamey Frank CLM', 'Noto Rashi Hebrew', 'Heebo', 'Times New Roman', 'Arial', 'Arial Narrow', 'Rockwell', 'Poor Richard', 'Harrington'];
+export const FONTS = ['Noto Serif', 'Noto Sans', 'Noto Sans Mono', 'Noto Sans Hebrew', 'Noto Serif Hebrew', 'David Libre', 'Taamey David CLM', 'Taamey Frank CLM', 'Noto Rashi Hebrew', 'Heebo', 'Times New Roman', 'Arial', 'Arial Narrow', 'Rockwell', 'Poor Richard', 'Harrington', ...FONT_COLLECTION.map(font=>font.family)];
