@@ -13,3 +13,5 @@
 *.odt binary
 *.docx binary
 *.pdf binary
+# Preserve upstream font sources and licenses byte-for-byte for manifest checks.
+public/fonts/collection/** -text
