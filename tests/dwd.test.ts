@@ -6,6 +6,7 @@ import JSZip from 'jszip';
 import {exportDocx} from '../src/formats/docx';
 import {exportOdt,importOdt} from '../src/formats/odt';
 import {headerPrintStyle} from '../src/header-format';
+import {blankDocument} from '../src/model';
 
 it('validates the DWD signature and size before starting the engine',()=>{
  expect(()=>validateDwd(new Uint8Array())).toThrow('empty or damaged');
@@ -13,6 +14,20 @@ it('validates the DWD signature and size before starting the engine',()=>{
  expect(()=>validateDwd(new Uint8Array(30*1024*1024+1))).toThrow('30 MB');
  expect(()=>validateDwd(new Uint8Array([38,2,0,0]))).not.toThrow();
  expect(()=>validateDwd(new Uint8Array([183,122,0,0]))).not.toThrow();
+});
+
+it('retains installed Unicode font names, horizontal scale, heading frames and right-anchored tables through save/reopen',async()=>{
+ const doc=blankDocument();
+ doc.page.border='double';doc.page.borderWidth=6;doc.page.borderInsets=[5,10,5,10];
+ doc.content.content=[{type:'paragraph',attrs:{dir:'rtl',language:'he',paragraphBorders:['1.5pt double #123456','none','1pt solid #000000','none'],borderPadding:[1,0,2,0]},content:[{type:'text',text:'שָׁלוֹם',marks:[{type:'textStyle',attrs:{fontFamily:'UniDavka David',fontSize:'18pt',characterScale:87,characterSpacing:0.2}}]}]},
+ {type:'table',attrs:{layoutWidth:491,tableAlign:'right'},content:[{type:'tableRow',content:[{type:'tableCell',content:[{type:'paragraph'}]}]}]}];
+ for(const reopened of [(await importOdt(await exportOdt(doc))).document,(await importDocx(await exportDocx(doc))).document]){
+  const p=reopened.content.content![0];const a=p.content![0].marks!.find(m=>m.type==='textStyle')!.attrs!;
+  expect(a.fontFamily).toBe('UniDavka David');expect(a.fontSize).toBe('18pt');expect(a.characterScale).toBe(87);expect(a.characterSpacing).toBe(0.2);
+  expect(p.attrs?.paragraphBorders).toEqual(doc.content.content![0].attrs!.paragraphBorders);expect(p.attrs?.borderPadding).toEqual([1,0,2,0]);
+  expect(reopened.content.content![1].attrs?.tableAlign).toBe('right');
+  expect(reopened.page.borderWidth).toBe(6);expect(reopened.page.borderInsets?.[0]).toBeCloseTo(5,0);expect(reopened.page.borderInsets?.[1]).toBeCloseTo(10,0);
+ }
 });
 
 it('retains text boxes, note references and note bodies emitted by Folio',async()=>{

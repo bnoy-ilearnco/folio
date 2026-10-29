@@ -24,6 +24,15 @@ corpus are documented; frontend CI remains enabled.
 
 ## Installed desktop app
 
+### 0.6.1: DavkaWriter fidelity
+
+DWD import uses locally installed UniDavka David/Rashi/Stam at their original
+point sizes, with bundled substitutes when unavailable. Native DavkaWriter 7
+comparison corrected missing table grid lines, gray shading and paragraph
+frames. Character widths, table anchoring, and page-border measurements are
+retained in ODT/DOCX. Proprietary fonts are never redistributed.
+See [comparison details and remaining print limitations](docs/davkawriter-import.md).
+
 ### 0.6.0: complete Mishnah and Bartenura library
 
 The new build adds **משניות**: all 63 masechtos, 4,192 mishnayot and Bartenura
@@ -160,7 +169,7 @@ For a signed build after configuring a publisher identity:
 The signing workflow checks trusted Authenticode signatures and timestamps on
 both the application and installer. It has no self-signed or unsigned fallback.
 
-Installed on this computer at `C:\Users\Admin\AppData\Local\Programs\Folio\folio-desktop.exe`, with Desktop and Start menu shortcuts. The current development installer is `Folio-0.4.1-Unsigned-Setup.exe`. Unversioned `Folio-Setup.exe` and `Folio.exe` are earlier 0.3.0 artifacts. For the current portable package use `Folio-0.4.1-Unsigned-Portable.zip`; keep the accompanying `resources/` folder beside it for the offline library. End users do not need Rust, Node.js, or the C++ build tools. WebView2 is the runtime used by the app; the installer checks for it.
+Installed on this computer at `C:\Users\Admin\AppData\Local\Programs\Folio\folio-desktop.exe`, with Desktop and Start menu shortcuts. The current development package is `Folio-0.6.1-Windows-x64-Offline-Setup.exe`. Earlier unversioned files and portable ZIPs are historical builds. End users do not need Rust, Node.js, or the C++ build tools. The single installer includes the offline library, fonts, converter and WebView2 prerequisite.
 
 The missing development dependencies were installed: Rust/Cargo 1.99.1 with the MSVC toolchain, rustfmt, Visual Studio Build Tools 2022 with C++ tools, and Windows SDK 10.0.26100.0. WebView2 was already installed.
 
@@ -306,7 +315,7 @@ Version 0.2.1 adds paired English and Hebrew writing buttons, including active l
 
 ## Share one installer
 
-The local development package is `Folio-0.6.0-Windows-x64-Offline-Setup.exe` (258,131,169 bytes).
+The local development package is `Folio-0.6.1-Windows-x64-Offline-Setup.exe`.
 It contains the application, offline library, bundled Hebrew/Rashi fonts,
 DWD reader/Python runtime, license resources and Microsoft's offline WebView2
 prerequisite installer. No portable ZIP or source folder is required.

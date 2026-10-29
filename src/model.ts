@@ -1,7 +1,7 @@
 import type { JSONContent } from '@tiptap/core';
 import type {BorderStyle} from './borders';
 export type DocNode = JSONContent;
-export type Page = { size: 'A4' | 'Letter'; orientation: 'portrait' | 'landscape'; top: number; right: number; bottom: number; left: number; header: string; footer: string; pageNumbers: boolean; border?:BorderStyle; borderColor?:string; headerContent?:DocNode; footerContent?:DocNode; headerDistance?:number; footerDistance?:number };
+export type Page = { size: 'A4' | 'Letter'; orientation: 'portrait' | 'landscape'; top: number; right: number; bottom: number; left: number; header: string; footer: string; pageNumbers: boolean; border?:BorderStyle; borderColor?:string; borderWidth?:number; borderInsets?:number[]; headerContent?:DocNode; footerContent?:DocNode; headerDistance?:number; footerDistance?:number };
 export type DocumentData = { version: 1; title: string; content: DocNode; page: Page };
 export const defaultPage: Page = { size: 'A4', orientation: 'portrait', top: 25.4, right: 25.4, bottom: 25.4, left: 25.4, header: '', footer: '', pageNumbers: false,border:'none',borderColor:'#364a63' };
 export const blankDocument = (): DocumentData => ({version:1,title:'Untitled',content:{type:'doc',content:[{type:'paragraph'}]},page:{...defaultPage}});

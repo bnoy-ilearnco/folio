@@ -1,11 +1,11 @@
 {
-  "version": "0.5.1",
+  "version": "0.6.1",
   "retrieved": "2026-10-26",
   "purpose": "Integrated into Folio and licensed under MIT with authorization from the original code owner on 26 October 2026.",
   "files": {
-    "dwd2docx.py": "4edb5453a407deda7c9ebc5438e1db3970dd4affa43e06d74c1cbd31a24bef26",
+    "dwd2docx.py": "3938771b7377868e508c5b3d5a44f20e455c009dc1d6f49d74804f77cd0bc4bf",
     "dwdparse.py": "f73791923d185e7f3c522d9eae950618bf47589ecea312aebb7b8ef4def7f70b",
-    "dwdread.py": "8f0aa586548955ed645807d2b723d6e8927558f30a6541317a3e0a6d6a50389f",
+    "dwdread.py": "c972dbc1724287a5807836c9ec9a14186454cfd75eba284562545d3c548424b9",
     "davkamap.py": "a47af06b3932093de5dd0e3503821ea035978d0429b2136a105610d679d25722",
     "bmpng.py": "bab451087223ddd4ade1d8cfc9e74a888b941fdcc33e7276b563d6ed076d931e",
     "pageborders.py": "8fe5d5290c2b3a9a3e04ccb8c250bd19c7916383e948e17e7811a24d70234ab1",
@@ -18,5 +18,6 @@
     "font_calib.json": "c3527a3f290f22d13e977ad99a3ed0bae049e9421cb972e146fa702da05a3675"
   },
   "component": "Folio offline DavkaWriter converter",
-  "license": "MIT; see LICENSE.txt. Third-party runtimes and fonts retain their own licenses."
+  "license": "MIT; see LICENSE.txt. Third-party runtimes and fonts retain their own licenses.",
+  "modified": "2026-10-29: installed Unicode fonts, signed table-border widths and grayscale percentages verified against DavkaWriter 7 PDF output."
 }

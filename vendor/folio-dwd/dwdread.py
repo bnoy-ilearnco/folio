@@ -1196,7 +1196,9 @@ def _rgb(c):
 
 def _bdr(b):
     color, width, l1, l2 = b
-    return dict(color='%06X' % _rgb(color), width=width, hidden=width < 0, line1=l1, line2=l2)
+    # Negative widths are still printed (verified against DavkaWriter 7 PDF
+    # output); treating the sign as hidden drops most worksheet grid lines.
+    return dict(color='%06X' % _rgb(color), width=width, hidden=width == 0, line1=l1, line2=l2)
 
 
 def to_D(doc):

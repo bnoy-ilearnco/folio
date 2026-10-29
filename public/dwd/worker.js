@@ -19,6 +19,11 @@ self.onmessage=async({data})=>{
   try{
     const py=await ready();
     input=py.toPy(data.bytes);py.globals.set('_folio_input',input);
+    // Only known Unicode counterparts; legacy Davka faces cannot show Unicode.
+    const allowed={'Davka David':'UniDavka David','Davka Rashi':'UniDavka Rashi','Davka Stam':'UniDavka Stam'};
+    const fonts=Object.fromEntries(Object.entries(data.fonts??{}).filter(([name,family])=>allowed[name]===family));
+    py.globals.set('_folio_fonts_json',JSON.stringify(fonts));
+    py.runPython('dwd2docx.OPTIONS["installed_fonts"] = json.loads(_folio_fonts_json)');
     result=py.runPython('_folio_result = dwd2docx.convert_bytes(bytes(_folio_input), diagnostics=True)\n_folio_result[0]');
     const bytes=new Uint8Array(result.toJs());
     const diagnostics=JSON.parse(py.runPython('json.dumps(_folio_result[4])'));

@@ -1,6 +1,7 @@
 import {importDocx} from './docx';
 import {FONTS,type DocNode} from '../model';
 import {containsHebrew} from '../language';
+import {installedDavkaFonts} from '../local-fonts';
 
 export type DwdDiagnostics={warnings:string[];truncated:boolean;reader:string;counts:{main_paragraphs:number;tables:number}};
 export function validateDwd(bytes:Uint8Array){
@@ -13,13 +14,14 @@ export function validateDwd(bytes:Uint8Array){
 // A fresh worker per import bounds memory use and discards the document and Python state.
 export async function convertDwd(bytes:Uint8Array):Promise<{bytes:Uint8Array;diagnostics:DwdDiagnostics}>{
   validateDwd(bytes);
+  const fonts=await installedDavkaFonts();
   return new Promise((resolve,reject)=>{
     const worker=new Worker(new URL(`${import.meta.env.BASE_URL}dwd/worker.js`,location.href));
     const finish=()=>{clearTimeout(timer);worker.terminate();};
     const timer=setTimeout(()=>{finish();reject(Error('DavkaWriter import took too long. The current document has been kept.'));},120_000);
     worker.onerror=()=>{finish();reject(Error('The local DavkaWriter reader could not start. Reopen Folio and try again.'));};
     worker.onmessage=({data})=>{finish();if(data.error)reject(Error(data.error));else resolve(data);};
-    const copy=bytes.slice();worker.postMessage({bytes:copy},[copy.buffer]);
+    const copy=bytes.slice();worker.postMessage({bytes:copy,fonts},[copy.buffer]);
   });
 }
 
@@ -36,7 +38,7 @@ export async function importDwd(bytes:Uint8Array){
       if(n.attrs.dir==='auto')n.attrs.dir='ltr';
       if(n.attrs.dir==='rtl'){n.attrs.language='he';if(n.attrs.textAlign==='left')n.attrs.textAlign='right';else if(n.attrs.textAlign==='right')n.attrs.textAlign='left';}
     }
-    for(const mark of n.marks??[])if(mark.type==='textStyle'&&mark.attrs?.fontFamily&&!FONTS.includes(mark.attrs.fontFamily)){
+    for(const mark of n.marks??[])if(mark.type==='textStyle'&&mark.attrs?.fontFamily&&!FONTS.includes(mark.attrs.fontFamily)&&!/^UniDavka (David|Rashi|Stam)$/.test(mark.attrs.fontFamily)){
       mark.attrs.fontFamily=containsHebrew(n.text??'')?'Noto Serif Hebrew':'Noto Serif';substituted=true;
     }
     for(const child of n.content??[])fonts(child);

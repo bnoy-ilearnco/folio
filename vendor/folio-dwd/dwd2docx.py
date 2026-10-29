@@ -30,6 +30,8 @@ OPTIONS = {'own_davka_fonts': False}
 APP_VERSION = '0.5.1'
 
 def word_font(name):
+    if name in OPTIONS.get('installed_fonts', {}):
+        return OPTIONS['installed_fonts'][name]
     if freefonts.is_davka(name):
         return name + ' Unicode' if OPTIONS.get('own_davka_fonts') else freefonts.free_font(name)
     if name in FREE_FAMILIES:
@@ -38,7 +40,7 @@ def word_font(name):
 
 def calibrated(st, rtl=True):
     """whether a run is drawn in the free font that stands in for a Davka font (and so is calibrated to its widths)"""
-    return bool(rtl) and freefonts.is_davka(st['font']) and not OPTIONS.get('own_davka_fonts')
+    return bool(rtl) and freefonts.is_davka(st['font']) and not OPTIONS.get('own_davka_fonts') and st['font'] not in OPTIONS.get('installed_fonts', {})
 
 def word_size(st, rtl=True):
     """half-points written to Word: a Davka font shown in its free counterpart is drawn at its calibrated size
@@ -1164,11 +1166,11 @@ def para_xml(D, p, page_break=False, anchors='', in_box=False, sect='', box_w=No
         ppr.append('<w:spacing w:before="%d" w:after="%d" w:line="%d" w:lineRule="%s"/>' % (p.get('push', 0) + p.get('band_push', 0) + sb, sa, max(lh - (bsz * 20 // 8), 40), 'atLeast' if inline_pic and not pic_exact else 'exact'))
     bd = ru.get('borders') or [0, 0, 0, 0]
     if any(bd[k] for k in (0, 1, 3)):
-        # a box (or side rules) around the paragraph: DavkaWriter's sides top, left, bottom, right; 1 single,
-        # 2 double, 3 thick; the spacing per side in points; neighbours with the same box form one box, as in Word
+        # DavkaWriter sides: top, left, bottom, right. Border 3 is double
+        # (verified against native PDF), not a thick single stroke.
         col = colorref(ru.get('border_color') or 0)
         sp = ru.get('border_space') or [1, 4, 1, 4]
-        kind = {1: ('single', 6), 2: ('double', 4), 3: ('single', 18)}
+        kind = {1: ('single', 6), 2: ('single', 18), 3: ('double', 8)}
         sides = []
         for name, k in (('top', 0), ('left', 1), ('bottom', 2), ('right', 3)):
             if bd[k] in kind:
@@ -2214,7 +2216,7 @@ def table_xml(D, t, mar, max_width=None):
     return ''.join(out)
 
 def _cell_border(b, side):
-    """one side of a DavkaWriter cell border (width in 1/4 pt, negative = hidden, a second line = double)"""
+    """One side of a cell border (signed width in 1/4 pt; a second line = double)."""
     if not b or b.get('hidden') or not b.get('width'):
         return '<w:%s w:val="nil"/>' % side
     w = abs(b['width'])
@@ -2254,7 +2256,10 @@ def table_xml_cells(D, t, rows, widths, cinfo, rtl):
             bottom = info(ri + 1, ci).get('top')
             bd = (_cell_border(c.get('top'), 'top') + _cell_border(c.get('left'), 'start' if not rtl else 'end')
                   + _cell_border(bottom, 'bottom') + _cell_border(right, 'end' if not rtl else 'start'))
-            shade = (c.get('shade') or 'FFFFFF').upper()
+            # shade_pct is the printed gray percentage, not opacity of the
+            # separate COLORREF. 91 -> #E8E8E8 in DavkaWriter's own PDF.
+            pct = c.get('shade_pct')
+            shade = ('%02X' % round(pct * 255 / 100)) * 3 if pct is not None and 0 <= pct <= 100 else (c.get('shade') or 'FFFFFF').upper()
             shd = '<w:shd w:val="clear" w:color="auto" w:fill="%s"/>' % shade if shade != 'FFFFFF' else ''
             va = {1: 'center', 2: 'bottom'}.get(c.get('valign'), '')
             cell = r[ci] if ci < len(r) else []
@@ -3041,6 +3046,10 @@ def make_diagnostics(D, d):
                 k = f if isinstance(f, str) else type(f).__name__
                 fields[k] = fields.get(k, 0) + 1
     warnings = list(D.get('warnings') or [])      # from the parser (e.g. a cut-off file), most important first
+    used_fonts = sorted({D['styles'][r['style']]['font'] for p in all_paragraphs(D) for r in p['runs'] if r.get('style') in D['styles']})
+    substitutions = [name + ' → ' + word_font(name) for name in used_fonts if freefonts.is_davka(name) and name not in OPTIONS.get('installed_fonts', {})]
+    if substitutions:
+        warnings.append('Font substitutes: ' + '; '.join(substitutions) + '. Original Unicode counterparts are used when installed.')
     if D.get('reader') != 'spec':
         warnings.append(('heuristic reader used: %s' % (D.get('reader_error') or 'spec reader failed'))[:300])
     if pics.get('lead'):
