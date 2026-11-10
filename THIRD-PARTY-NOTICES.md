@@ -32,3 +32,7 @@ license is missing, or waive attribution, share-alike, source or other terms.
 The unmodified Google Fonts families in `public/fonts/collection/` each include their original SIL Open Font License 1.1: Cardo, Frank Ruhl Libre, Bellefair, Libre Baskerville, Gveret Levin, Playpen Sans Hebrew, Solitreo, Patrick Hand, Uncial Antiqua, and IM FELL English.
 
 Keter Aram Tsova, Stam Ashkenaz CLM, and Stam Sefarad CLM are by Yoram Gnat / Culmus, distributed under GPL v2 with the document embedding exception. Their licenses, FontForge sources and upstream documentation are bundled alongside the fonts; Keter includes MIT licensed Hebrew layout logic. The original ancient font source archive is also included. `manifest.json` records source URLs and SHA-256 checksums. No Shlomo or proprietary Davka font files are included.
+
+## Mekorot-Rashi (0.6.3)
+
+Mekorot-Rashi 0.003 is based on Alan Hoenig's Makor Rashi with corrections by Yoram Gnat. The unmodified font and FontForge source are bundled in `public/fonts/collection/mekorotrashi/` under LPPL 1.3c; the license text is included. See that directory's README and the parent source/checksum manifest.

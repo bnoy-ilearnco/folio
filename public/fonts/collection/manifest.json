@@ -213,5 +213,20 @@
     "file": "stamsefarad/StamSefaradCLM.sfd",
     "source": "https://mirrors.ibiblio.org/pub/mirrors/CTAN/fonts/culmus/source/StamSefaradCLM.sfd",
     "sha256": "2dc74b0b2e099434838e457e954feb9bdb49e3356d6d949ec2e8ceae34135f5b"
+  },
+  {
+    "file": "mekorotrashi/Mekorot-Rashi.ttf",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20with%20Vowels%20%28no%20cantillation%29/Mekorot%20%28LPPL%29/Rashi/Mekorot-Rashi.ttf",
+    "sha256": "0e53b3719fc517a51703715a6741a8c9092ad6eb89ed03acf56d4d8fd5e036d1"
+  },
+  {
+    "file": "mekorotrashi/Mekorot Rashi.sfd",
+    "source": "https://raw.githubusercontent.com/aharonium/fonts/2b5e366ffaa89d42159092fcccd6d027b50a9ef9/Fonts/Hebrew%20Letters%20with%20Vowels%20%28no%20cantillation%29/Mekorot%20%28LPPL%29/Rashi/src/Mekorot%20Rashi.sfd",
+    "sha256": "601122474ba69592563d9ef483d683719d6f893c62b75fd5b94cbbbb11f0c59a"
+  },
+  {
+    "file": "mekorotrashi/LPPL-1.3c.txt",
+    "source": "https://www.latex-project.org/lppl/lppl-1-3c.txt",
+    "sha256": "c1ae6e179a6d28bbd5c483fbacc744acc75e922d598281dc3390aab26126e163"
   }
 ]

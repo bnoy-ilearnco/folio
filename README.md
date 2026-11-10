@@ -24,6 +24,12 @@ corpus are documented; frontend CI remains enabled.
 
 ## Installed desktop app
 
+### 0.6.3: Mekorot-Rashi
+
+Adds the original Mekorot-Rashi font, including Hebrew vowel corrections, as an
+offline document font. Its LPPL license and FontForge source are included.
+
+
 ### 0.6.2: publishing, handwriting and manuscript fonts
 
 Adds 13 open font families, bundled for offline use and organized by style and
