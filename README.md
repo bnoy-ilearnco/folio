@@ -24,6 +24,13 @@ corpus are documented; frontend CI remains enabled.
 
 ## Installed desktop app
 
+### 0.6.4: repaired Mekorot-Rashi niqqud
+
+Mekorot-Rashi Folio fixes composite-vowel and rafe placement, adds meteg, and
+preserves the original letterforms. Older Mekorot-Rashi document runs are
+upgraded to the explicitly named repaired family when opened. The original
+font, source, license, derivative patch source and change log are bundled.
+
 ### 0.6.3: Mekorot-Rashi
 
 Adds the original Mekorot-Rashi font, including Hebrew vowel corrections, as an

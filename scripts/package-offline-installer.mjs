@@ -9,7 +9,7 @@ if(config.bundle.windows?.webviewInstallMode?.type!=='offlineInstaller')throw Er
 const script=await readFile(new URL('src-tauri/target/release/nsis/x64/installer.nsi',root),'utf8');
 if(!script.includes('!define INSTALLWEBVIEW2MODE "offlineInstaller"'))throw Error('NSIS did not embed offline WebView2.');
 for(const file of ['library.sqlite','LIBRARY-NOTICES.txt'])if(!script.includes(`resources\\${file}`))throw Error('Missing bundled library resource: '+file);
-for(const file of ['dist/dwd/worker.js','dist/dwd/converter/sources.json','dist/dwd/pyodide/pyodide.asm.wasm','dist/dwd/pyodide/python_stdlib.zip','dist/fonts/hebrew/NotoRashiHebrew-Regular.ttf','dist/fonts/hebrew/NotoRashiHebrew-Bold.ttf'])await stat(new URL(file,root));
+for(const file of ['dist/dwd/worker.js','dist/dwd/converter/sources.json','dist/dwd/pyodide/pyodide.asm.wasm','dist/dwd/pyodide/python_stdlib.zip','dist/fonts/collection/mekorotrashi/Mekorot-Rashi-Folio.ttf','dist/fonts/collection/mekorotrashi/build-mekorot-font.py','dist/fonts/collection/mekorotrashi/CHANGES.md','dist/fonts/hebrew/NotoRashiHebrew-Regular.ttf','dist/fonts/hebrew/NotoRashiHebrew-Bold.ttf'])await stat(new URL(file,root));
 const fontManifest=JSON.parse(await readFile(new URL('public/fonts/collection/manifest.json',root),'utf8'));
 for(const font of fontManifest){const bytes=await readFile(new URL('dist/fonts/collection/'+font.file,root));if(createHash('sha256').update(bytes).digest('hex')!==font.sha256)throw Error('Bundled font/license hash mismatch: '+font.file);}
 const source=new URL(`src-tauri/target/release/bundle/nsis/Folio_${version}_x64-setup.exe`,root);

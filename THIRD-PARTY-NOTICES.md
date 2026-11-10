@@ -36,3 +36,7 @@ Keter Aram Tsova, Stam Ashkenaz CLM, and Stam Sefarad CLM are by Yoram Gnat / Cu
 ## Mekorot-Rashi (0.6.3)
 
 Mekorot-Rashi 0.003 is based on Alan Hoenig's Makor Rashi with corrections by Yoram Gnat. The unmodified font and FontForge source are bundled in `public/fonts/collection/mekorotrashi/` under LPPL 1.3c; the license text is included. See that directory's README and the parent source/checksum manifest.
+
+### Mekorot-Rashi Folio derivative (0.6.4)
+
+Folio uses Mekorot-Rashi Folio 1.004, an explicitly renamed LPPL 1.3c derivative with niqqud positioning repairs. The unmodified upstream TTF/SFD and license remain bundled. Changes, maintainership and complete build instructions are in `public/fonts/collection/mekorotrashi/CHANGES.md`; the editable patch source is `scripts/build-mekorot-font.py`. No support or endorsement by the original authors is implied.

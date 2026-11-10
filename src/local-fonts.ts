@@ -1,3 +1,4 @@
+import {upgradeMekorotFont} from './font-compat';
 import type {DocNode} from './model';
 import {cssQuoted} from './language';
 
@@ -20,6 +21,7 @@ export async function installedDavkaFonts():Promise<Record<string,string>>{
 // CSS has no horizontal scaling for an ordinary, wrapping inline run. Match
 // its total advance with tracking; retain the exact scale separately for files.
 export async function prepareImportedFonts(root:DocNode):Promise<void>{
+  upgradeMekorotFont(root);
   const loads=new Set<string>();
   function collect(n:DocNode){for(const m of n.marks??[])if(m.type==='textStyle'&&m.attrs?.characterScale)loads.add(`${m.attrs.fontSize||'11pt'} ${cssQuoted(m.attrs.fontFamily||'Noto Serif Hebrew')}`);n.content?.forEach(collect);}
   collect(root);

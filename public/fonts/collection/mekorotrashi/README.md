@@ -1,5 +1,5 @@
-# Mekorot-Rashi
+# Mekorot-Rashi and Mekorot-Rashi Folio
 
-Original Mekorot-Rashi 0.003, based on Alan Hoenig's Makor Rashi, with vowel corrections by Yoram Gnat. Unmodified font and FontForge source retrieved from the Open Siddur font collection; source URLs and checksums are recorded in the parent manifest. Licensed under LPPL 1.3c, as stated in the embedded font copyright. The license text is included.
+The original Mekorot-Rashi 0.003, based on Alan Hoenig's Makor Rashi with corrections by Yoram Gnat, is retained unmodified with its FontForge source and LPPL 1.3c license. The parent manifest records the upstream URLs and hashes.
 
-This Hebrew font has niqqud but no cantillation support; meteg is absent and some composite vowel positioning is imperfect. Bold/italic use synthetic styling. Its original internal family name, Mekorot-Rashi, is retained for interchange.
+Folio uses the separately named Mekorot-Rashi Folio 1.004 derivative. See CHANGES.md for changes, maintainership, reproducible build instructions and scope. The original authors do not maintain or support this derivative. The repaired font is also distributed under LPPL 1.3c.

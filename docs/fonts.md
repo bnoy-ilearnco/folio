@@ -29,3 +29,11 @@ Adds the original Mekorot-Rashi 0.003, with Yoram Gnat's vowel corrections, to t
 Targeted validation: checksum/license integrity and ODT/DOCX family-name round trips passed; production/CSP tests loaded the collection offline and reopened Mekorot-Rashi in ODT. Chromium PDF output embeds `Mekorot-Rashi`. The existing Noto Rashi offline/interchange test also passed.
 
 The 0.6.3 single-file offline installer completed a local Windows update with exit code 0. Native Folio selection and pointed Hebrew rendering were verified. The library SHA-256 is unchanged (`e525e891a7f9de6fed02d227bd31a29c803ef5464aa0a96f04c2f1ded757f438`). Installer SHA-256: `8a9b4ff6853c19dba07758151e26ae06f7e935484a832eda1a310c719e273cd5`.
+
+## 0.6.4: Mekorot-Rashi Folio
+
+The separately named LPPL derivative repairs composite-vowel and rafe anchoring, adds meteg with mark-to-mark attachment, corrects holam-haser classification and retains subsequent-mark anchors after vav-holam substitution. It preserves all original glyph outlines and advances plus the original final-kaf and furtive-patah rules. Ascender metrics include raised marks. The font still has no cantillation. Original files, license, complete patch source and CHANGES.md are bundled. Existing Mekorot-Rashi content (including headers, footers and recovery documents) upgrades on opening; exports use the repaired family's explicit name.
+
+Validation: six HarfBuzz/font-table regression tests cover every Hebrew base with the lower vowels plus meteg and intervening dagesh, canonical mark order, zero advances, unchanged original outlines/advances/GSUB, rafe clearance and preservation of final-kaf/furtive-patah behavior. The 27 frontend unit checks pass. Production/CSP tests verify legacy ODT migration, repaired-family ODT/DOCX interchange and PDF embedding; Noto Rashi remains available.
+
+The 0.6.4 offline installer updated this Windows machine with exit code 0. The installed native app opened the niqqud sample and displayed the repaired font at 24 pt, including composite vowels, rafe, meteg, final kaf and furtive patah. The library hash remains unchanged. Installer SHA-256: `6b8f1b2c256272487f289093a9d3f1f62795a8f8dd58ae095fcb2c6c08072a2d`. Production checks: 14 passed, optional real DWD fixture skipped.

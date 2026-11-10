@@ -1,3 +1,4 @@
+import {upgradeMekorotFont} from '../font-compat';
 import {importDocx} from './docx';
 import {FONTS,type DocNode} from '../model';
 import {containsHebrew} from '../language';
@@ -28,6 +29,7 @@ export async function convertDwd(bytes:Uint8Array):Promise<{bytes:Uint8Array;dia
 export async function importDwd(bytes:Uint8Array){
   const converted=await convertDwd(bytes);
   const result=await importDocx(converted.bytes);
+  for(const root of [result.document.content,result.document.page.headerContent,result.document.page.footerContent])if(root)upgradeMekorotFont(root);
   const warnings=new Set(result.warnings.filter(w=>!w.startsWith('DOCX import supports')));
   let substituted=false;
   function fonts(n:DocNode){

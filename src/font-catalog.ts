@@ -1,10 +1,10 @@
 // Bundled, unmodified open font families. Sources and licenses accompany the files.
 export const FONT_COLLECTION = [
   {
-    "family": "Mekorot-Rashi",
+    "family": "Mekorot-Rashi Folio",
     "group": "Scroll & manuscript · Hebrew",
-    "files": [{"path":"/fonts/collection/mekorotrashi/Mekorot-Rashi.ttf","weight":"400","style":"normal"}],
-    "note": "Traditional Rashi commentary lettering; Hebrew vowels, with some positioning limitations."
+    "files": [{"path":"/fonts/collection/mekorotrashi/Mekorot-Rashi-Folio.ttf","weight":"400","style":"normal"}],
+    "note": "Rashi commentary lettering with Folio niqqud corrections, including meteg."
   },
   {
     "family": "Cardo",
